@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+outputs/
+.gemini/
+.agents/
+brain/
+*.log
+.DS_Store
