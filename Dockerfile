@@ -1,3 +1,4 @@
+# Use an official Python runtime as a parent image
 FROM python:3.11-slim
 
 # Set environment variables
@@ -18,6 +19,7 @@ WORKDIR /app
 # Install dependencies first (for caching)
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir "keras>=3.0.0"
 
 # Copy project files
 COPY . .
@@ -27,4 +29,6 @@ EXPOSE 8000
 
 # Run the application
 CMD ["uvicorn", "backend.main:app", "--host", "0.0.0.0", "--port", "8000"]
+
+
 
