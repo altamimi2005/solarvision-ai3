@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolarVision AI - Panel Damage Detection</title>
+    <meta name="description" content="Intelligent Solar Panel Damage Classification using AI.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logo.png" type="image/png">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-area">
+                <img src="logo.png" alt="SolarVision AI Logo" class="logo-image">
+                <div class="logo-text">
+                    <h1>SolarVision AI</h1>
+                    <p>Advanced Photovoltaic Damage Detection System</p>
+                </div>
+            </div>
+            <div class="header-badge">
+                <span class="badge-icon">⚡</span> AI-Powered
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-badge">
+                <span class="badge-icon">✨</span> Powered by Computer Vision
+            </div>
+            <h2 class="hero-title">Intelligent Solar Panel<br>Damage Classification</h2>
+            <p class="hero-subtitle">Upload images of solar panels and let our AI-powered system detect damages.</p>
+        </section>
+
+        <!-- Upload Section -->
+        <section class="upload-section" id="upload-section">
+            <div class="upload-box" id="drop-zone">
+                <input type="file" id="file-input" multiple accept="image/*" hidden>
+                <div class="upload-icon-wrapper">
+                    <div class="upload-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12" />
+                        </svg>
+                    </div>
+                    <div class="upload-sparkle">✨</div>
+                </div>
+                <h3>Drag & drop images here</h3>
+                <p>or click to browse your files (Single or batch upload)</p>
+            </div>
+        </section>
+
+        <!-- Loading Section -->
+        <section class="loading-section hidden" id="loading-section">
+            <div class="spinner"></div>
+            <h3>Analyzing Solar Panels...</h3>
+            <p>Our deep learning models are examining the images.</p>
+        </section>
+
+        <!-- Results Section -->
+        <section class="results-section hidden" id="results-section">
+            <div class="results-header">
+                <h2>Analysis Results</h2>
+                <div class="results-summary" id="results-summary">
+                    <!-- populated by js -->
+                </div>
+                <button class="btn-primary" id="btn-new-upload">Upload More Files</button>
+            </div>
+
+            <div class="table-container">
+                <table class="results-table">
+                    <thead>
+                        <tr>
+                            <th>Image Name</th>
+                            <th>Result</th>
+                            <th>Confidence</th>
+                        </tr>
+                    </thead>
+                    <tbody id="results-tbody">
+                        <!-- rows populated by js -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Process Steps -->
+        <section class="process-steps">
+            <div class="step">
+                <div class="step-number step-1">1</div>
+                <h4>Upload Images</h4>
+                <p>Select single or multiple solar panel images from your device</p>
+            </div>
+            <div class="step">
+                <div class="step-number step-2">2</div>
+                <h4>AI Analysis</h4>
+                <p>Advanced algorithms detect damage patterns instantly</p>
+            </div>
+            <div class="step">
+                <div class="step-number step-3">3</div>
+                <h4>Get Results</h4>
+                <p>Review detailed reports with confidence scores and export data</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo-area">
+                    <img src="logo.png" alt="SolarVision AI Logo" class="logo-image small">
+                    <span>SolarVision AI</span>
+                </div>
+                <p>State-of-the-art computer vision technology for automated solar panel inspection and damage
+                    detection.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Technology</h4>
+                <ul>
+                    <li>Deep Learning Models</li>
+                    <li>Real-time Processing</li>
+                    <li>High Accuracy Detection</li>
+                    <li>Batch Analysis Support</li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>✉️ support@solarvision.ai</p>
+                <p>🔗 View on GitHub</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast hidden"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
